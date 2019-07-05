@@ -2,6 +2,16 @@ html.is-clipped--navbar {
   overflow-y: hidden;
 }
 
+.lisk-logo {
+  display: block;
+  margin: 0.5em 3em 1em 1em;
+  width: 60%;
+  height: 60%;
+  background-image: url(../img/logo-light-2.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 body {
   padding-top: var(--height-navbar);
 }
