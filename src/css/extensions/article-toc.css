@@ -17,9 +17,33 @@
 }
 
 .article-aside {
-    display: none;
-    max-height: calc(100% - 14rem);
-    overflow-y: auto;
+    background-color: var(--color-navbar-bg);
+    color: #fff;
+}
+
+@media screen and (max-width: 1025px) {
+    .article-aside {
+        display: none;
+        position: fixed;
+        top: var(--height-navbar);
+        left: 0;
+        width: 100%;
+        font-size: 0.9375rem;
+        z-index: var(--z-index-nav);
+        max-height: calc(100% - 14rem);
+        overflow-y: auto;
+    }
+
+    .article-aside.is-active {
+        display: block;
+        position: fixed;
+        top: 150px;
+        right: 0;
+        font-size: 13px;
+        border-left: dotted 1px #e1e1e1;
+        padding-left: 1rem;
+        width: 16rem;
+    }
 }
 
 @media screen and (min-width: 1025px) {
