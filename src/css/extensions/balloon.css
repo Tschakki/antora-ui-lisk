@@ -8,6 +8,7 @@ button[aria-label][data-balloon-pos] {
 
 [aria-label][data-balloon-pos] {
     cursor: pointer; }
+
 [aria-label][data-balloon-pos]:after {
     opacity: 0;
     pointer-events: none;
@@ -26,6 +27,7 @@ button[aria-label][data-balloon-pos] {
     position: absolute;
     white-space: nowrap;
     z-index: 10; }
+
 [aria-label][data-balloon-pos]:before {
     width: 0;
     height: 0;
@@ -235,7 +237,7 @@ button[aria-label][data-balloon-pos] {
 @media screen and (max-width: 768px) {
     [aria-label][data-balloon-length="xlarge"]:after {
         white-space: normal;
-        width: 90vw; } }
+        width: 90px; } }
 
 [aria-label][data-balloon-length="fit"]:after {
     white-space: normal;
