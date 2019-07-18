@@ -23,14 +23,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 : p.childNodes[0];
         }
     }).on('success', function(e) {
-        e.clearSelection();
-        e.trigger.textContent = 'Copied';
-        e.trigger.style.background = 'transparent';
+        //e.clearSelection();
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        var label = document.createAttribute("aria-label");
+        var balloon = document.createAttribute("data-balloon-pos");
+        label.value = "Copied";
+        balloon.value = "down";
+        e.trigger.setAttributeNode(label);
+        e.trigger.setAttributeNode(balloon);
+        /*var tooltip = document.createElement('span');
+        tooltip.className = 'tooltipped tooltipped-w m-2 p-2 border';
+        tooltip['aria-label'] = 'copied';*/
+
+        //e.trigger.appendChild(tooltip)
+        //e.trigger["aria-label"] = 'Copied';
+       // e.trigger["data-balloon-pos"] = 'right';
+        //e.trigger.style.background = 'transparent';
         setTimeout(function() {
-            e.trigger.textContent = '';
-            e.trigger.style.background = 'url(_/img/copy.png)';
-            e.trigger.style['background-size'] = 'cover';
-            e.trigger.style['background-repeat'] = 'no-repeat';
+            //e.trigger.removeChild(tooltip);
+        //    e.trigger.textContent = '';
+            e.trigger["aria-label"] = '';
         }, 2000);
     });
 });
