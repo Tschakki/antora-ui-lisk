@@ -36,15 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         /*var tooltip = document.createElement('span');
         tooltip.className = 'tooltipped tooltipped-w m-2 p-2 border';
         tooltip['aria-label'] = 'copied';*/
-
         //e.trigger.appendChild(tooltip)
         //e.trigger["aria-label"] = 'Copied';
        // e.trigger["data-balloon-pos"] = 'right';
         //e.trigger.style.background = 'transparent';
         setTimeout(function() {
-            //e.trigger.removeChild(tooltip);
-        //    e.trigger.textContent = '';
-            e.trigger["aria-label"] = '';
+            e.trigger.removeAttribute("aria-label");
+            e.trigger.removeAttribute("data-balloon-pos");
         }, 2000);
     });
 });
