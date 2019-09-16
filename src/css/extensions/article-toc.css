@@ -57,7 +57,7 @@
         padding-left: 1rem;
         width: 16rem;
         max-height: calc(100% - 14rem);
-        overflow-y: auto
+        overflow-y: auto;
     }
 
     .article-aside.hidden {
